@@ -1,10 +1,7 @@
 package isbngo
 
-import (
-	"github.com/Issei0804-ie/isbn-go/isbn10"
-	"github.com/Issei0804-ie/isbn-go/isbn13"
-)
-
 func IsValidIsbn(maybeIsbn string) bool {
-	return isbn10.IsValid() || isbn13.IsValid()
+	IsValidIsbn10, _ := IsValidIsbn10(maybeIsbn)
+	IsValidIsbn13, _ := IsValidIsbn13(maybeIsbn)
+	return IsValidIsbn10 || IsValidIsbn13
 }

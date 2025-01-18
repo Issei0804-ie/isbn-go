@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	hoge := isbngo.IsValidIsbn("sample")
+	hoge := isbngo.IsValidIsbn("0471958697")
 	fmt.Println(hoge)
 }
