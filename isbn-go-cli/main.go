@@ -1,12 +1,18 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 
 	isbngo "github.com/Issei0804-ie/isbn-go"
 )
 
 func main() {
-	hoge := isbngo.IsValidIsbn("0471958697")
-	fmt.Println(hoge)
+	flag.Parse()
+	maybeIsbns := flag.Args()
+
+	for _, maybeIsbn := range maybeIsbns {
+		result := isbngo.IsValidIsbn(maybeIsbn)
+		fmt.Println(result)
+	}
 }
