@@ -1,4 +1,4 @@
-module github.com/Issei0804-ie/isbn-go/cli
+module github.com/Issei0804-ie/isbn-go/isbn-go-cli
 
 go 1.23.2
 
